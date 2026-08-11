@@ -1016,7 +1016,7 @@ a:focus-visible {
   top: 2.5%;
   left: 2.5%;
   display: grid;
-  width: clamp(88px, 10vw, 160px);
+  width: clamp(132px, 15vw, 240px);
   aspect-ratio: 1;
   place-items: center;
   filter: drop-shadow(7px 8px 0 #0a0a0a);
@@ -1045,7 +1045,7 @@ a:focus-visible {
   background: var(--rebel-pink);
   clip-path: polygon(50% 0%, 60% 20%, 79% 7%, 78% 30%, 100% 27%, 84% 45%, 100% 58%, 76% 61%, 80% 84%, 59% 73%, 50% 100%, 40% 74%, 19% 87%, 23% 62%, 0% 57%, 16% 44%, 0% 27%, 23% 30%, 20% 7%, 40% 20%);
   color: #fff7dc;
-  font-size: clamp(0.58rem, 1vw, 1rem);
+  font-size: clamp(0.78rem, 1.25vw, 1.25rem);
   font-weight: 900;
   letter-spacing: 0.08em;
   line-height: 1;
