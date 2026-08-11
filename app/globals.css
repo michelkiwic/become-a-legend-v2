@@ -1198,6 +1198,7 @@ a:focus-visible {
   transform: scale(1.06);
 }
 
+.image-marker.is-active .marker-name,
 .image-marker:hover .marker-name,
 .image-marker:focus-visible .marker-name {
   background: var(--rebel-pink);
