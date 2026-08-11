@@ -77,21 +77,23 @@ const categories: Category[] = [
   },
   {
     id: "06",
-    name: "The Climb",
-    point: { x: 74.8, y: 49.8 },
-    detailSrc: "closeup-u6-white.webp",
-    closeup: {
-      src: "closeup-u6-white.webp",
-      alt: "Close-up of a suspended black figure from The Climb",
-    },
-    outline:
-      "M67 39 C71 35 78 34 81 38 C84 45 85 57 82 62 C78 67 70 65 67 61 C64 55 63 45 67 39 Z",
+    name: "4th Wall",
+    point: { x: 61.8, y: 51.5 },
+    detailSrc: "yoshi-moshi-model.jpg",
+    outline: "M56 46 L67 46 L67 57 L56 57 Z",
+  },
+  {
+    id: "07",
+    name: "Videos",
+    point: { x: 49.2, y: 53.2 },
+    detailSrc: "yoshi-moshi-model.jpg",
+    outline: "M43 48 L55 48 L55 59 L43 59 Z",
   },
 ];
 
 const utilityCategories = [
-  { id: "07", name: "Legal" },
-  { id: "08", name: "Contact" },
+  { id: "08", name: "Legal" },
+  { id: "09", name: "Contact" },
 ];
 
 export default function Home() {
@@ -305,7 +307,7 @@ export default function Home() {
           <img
             className="model-image model-image-base"
             src="yoshi-moshi-model.jpg"
-            alt="Yoshi and Moshi presenting a miniature exhibition model with six groups of figures"
+            alt="Yoshi and Moshi presenting a miniature exhibition model with seven exhibition categories"
             draggable={false}
           />
 
