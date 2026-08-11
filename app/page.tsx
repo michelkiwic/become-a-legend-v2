@@ -96,11 +96,21 @@ const categories: Category[] = [
     frameOutline:
       "M38 44 C41.5 41.7 46 42 49.5 42 C54 41.8 58.3 42.7 60.2 45.5 C61.2 49.5 61.1 55.3 60 58.6 C57.4 62 52.9 62.4 49 62.2 C44.6 62.6 40.3 61.3 38.4 58.2 C37.1 53.9 37.1 47.8 38 44 Z",
   },
+  {
+    id: "08",
+    name: "Texts",
+    point: { x: 86.6, y: 64.2 },
+    detailSrc: "yoshi-moshi-model.jpg",
+    outline:
+      "M83.7 57.5 C85 56.8 87.3 57.2 88.7 58.2 C89.3 61.6 89.2 67.2 88.3 70 C86.8 70.9 84.6 70.6 83.6 69.3 C83 66.1 83.1 60.3 83.7 57.5 Z",
+    frameOutline:
+      "M81.4 55.5 C83.7 53.9 87.7 54.4 90 56.2 C91.4 60.1 91.1 67.8 89.5 72.1 C87 73.8 83 73.2 81.5 70.9 C80.2 66.5 80.2 59.3 81.4 55.5 Z",
+  },
 ];
 
 const utilityCategories = [
-  { id: "08", name: "Legal" },
-  { id: "09", name: "Contact" },
+  { id: "09", name: "Legal" },
+  { id: "10", name: "Contact" },
 ];
 
 export default function Home() {
@@ -314,7 +324,7 @@ export default function Home() {
           <img
             className="model-image model-image-base"
             src="yoshi-moshi-model.jpg"
-            alt="Yoshi and Moshi presenting a miniature exhibition model with seven exhibition categories"
+            alt="Yoshi and Moshi presenting a miniature exhibition model with eight exhibition categories"
             draggable={false}
           />
 
