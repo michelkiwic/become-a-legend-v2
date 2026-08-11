@@ -108,6 +108,8 @@ const categories: Category[] = [
     detailSrc: "yoshi-moshi-model.jpg",
     outline:
       "M83.7 57.5 C85 56.8 87.3 57.2 88.7 58.2 C89.3 61.6 89.2 67.2 88.3 70 C86.8 70.9 84.6 70.6 83.6 69.3 C83 66.1 83.1 60.3 83.7 57.5 Z",
+    hitOutline:
+      "M80.5 54.2 C83.3 52.4 88.1 52.9 90.8 55 C92.3 59.4 92 68.2 90.2 73 C87.2 74.9 82.5 74.2 80.7 71.5 C79.2 66.6 79.2 58.5 80.5 54.2 Z",
     frameOutline:
       "M80.5 54.2 C83.3 52.4 88.1 52.9 90.8 55 C92.3 59.4 92 68.2 90.2 73 C87.2 74.9 82.5 74.2 80.7 71.5 C79.2 66.6 79.2 58.5 80.5 54.2 Z",
   },
@@ -343,7 +345,11 @@ export default function Home() {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            {[...categories.filter((category) => category.id !== "04"), ...categories.filter((category) => category.id === "04")].map((category) => (
+            {[
+              ...categories.filter((category) => category.id !== "04" && category.id !== "08"),
+              ...categories.filter((category) => category.id === "04"),
+              ...categories.filter((category) => category.id === "08"),
+            ].map((category) => (
               <path
                 key={category.id}
                 className="hotspot-hit-area"
