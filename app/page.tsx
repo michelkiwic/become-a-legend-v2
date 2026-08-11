@@ -7,6 +7,7 @@ type Category = {
   name: string;
   point: { x: number; y: number };
   outline: string;
+  hitOutline?: string;
   frameOutline?: string;
   detailSrc: string;
   closeup?: {
@@ -63,6 +64,8 @@ const categories: Category[] = [
     },
     outline:
       "M67 56 C73 52 83 52 87 57 C89 64 90 75 86 79 C80 83 70 81 67 77 C64 71 63 62 67 56 Z",
+    hitOutline:
+      "M66 41 C71 36 80 36 85 40 C89 47 90 58 89 68 C90 76 88 82 84 85 C78 88 69 85 65 81 C62 73 62 61 64 52 C63 47 63 44 66 41 Z",
     frameOutline:
       "M66 41 C71 36 80 36 85 40 C89 47 90 58 89 68 C90 76 88 82 84 85 C78 88 69 85 65 81 C62 73 62 61 64 52 C63 47 63 44 66 41 Z",
   },
@@ -340,11 +343,11 @@ export default function Home() {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            {categories.map((category) => (
+            {[...categories.filter((category) => category.id !== "04"), ...categories.filter((category) => category.id === "04")].map((category) => (
               <path
                 key={category.id}
                 className="hotspot-hit-area"
-                d={category.outline}
+                d={category.hitOutline ?? category.outline}
                 onMouseEnter={() => setActiveId(category.id)}
                 onClick={() => toggleCategory(category.id)}
               />
