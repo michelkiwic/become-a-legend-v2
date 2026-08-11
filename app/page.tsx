@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 type Category = {
   id: string;
@@ -125,19 +125,49 @@ export default function Home() {
   const hasEntered = entryStage === 2;
   const [activeId, setActiveId] = useState<string | null>(null);
   const [detailId, setDetailId] = useState<string | null>(null);
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const detailExitTimer = useRef<number | null>(null);
   const activeCategory = categories.find((category) => category.id === activeId);
   const detailCategory = categories.find((category) => category.id === detailId);
 
-  const toggleCategory = (id: string) => {
-    if (detailId === id) {
-      setDetailId(null);
-      setActiveId(null);
-      return;
+  const showDetail = (id: string) => {
+    if (detailExitTimer.current !== null) {
+      window.clearTimeout(detailExitTimer.current);
+      detailExitTimer.current = null;
     }
 
     setActiveId(id);
     setDetailId(id);
+    window.requestAnimationFrame(() => setIsDetailOpen(true));
+  };
+
+  const returnToModel = () => {
+    setMenuOpen(false);
+    setActiveId(null);
+
+    if (!detailId) {
+      setIsDetailOpen(false);
+      return;
+    }
+
+    setIsDetailOpen(false);
+    if (detailExitTimer.current !== null) {
+      window.clearTimeout(detailExitTimer.current);
+    }
+    detailExitTimer.current = window.setTimeout(() => {
+      setDetailId(null);
+      detailExitTimer.current = null;
+    }, 720);
+  };
+
+  const toggleCategory = (id: string) => {
+    if (detailId === id) {
+      returnToModel();
+      return;
+    }
+
+    showDetail(id);
   };
 
   return (
@@ -211,9 +241,7 @@ export default function Home() {
           href="#model"
           aria-label="Yoshi und Moshi – zum Ausstellungsmodell"
           onClick={() => {
-            setActiveId(null);
-            setDetailId(null);
-            setMenuOpen(false);
+            returnToModel();
           }}
         >
           <span className="wordmark-main">YOSHI<span>+</span>MOSHI</span>
@@ -244,9 +272,7 @@ export default function Home() {
                   className="site-menu-home"
                   type="button"
                   onClick={() => {
-                    setActiveId(null);
-                    setDetailId(null);
-                    setMenuOpen(false);
+                    returnToModel();
                   }}
                 >
                   Yoshi + Moshi
@@ -289,6 +315,10 @@ export default function Home() {
             </nav>
 
         {detailCategory ? (
+          <div className={`category-transition${isDetailOpen ? " is-detail-open" : ""}`}>
+            <div className="model-transition-panel" aria-hidden="true">
+              <img src="yoshi-moshi-model.jpg" alt="" draggable={false} />
+            </div>
           <article
             className={`category-detail category-detail-${detailCategory.id}`}
             aria-labelledby="category-detail-title"
@@ -315,14 +345,12 @@ export default function Home() {
             <button
               className="detail-back"
               type="button"
-              onClick={() => {
-                setDetailId(null);
-                setActiveId(null);
-              }}
+              onClick={returnToModel}
             >
               <span aria-hidden="true">←</span> Back to model
             </button>
           </article>
+          </div>
         ) : (
         <div
           className={`model-frame${activeCategory ? " has-active" : ""}`}
