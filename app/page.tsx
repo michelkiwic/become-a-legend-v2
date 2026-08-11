@@ -214,7 +214,17 @@ export default function Home() {
             <nav className={`site-menu${menuOpen ? " is-open" : ""}`} id="site-menu" aria-label="Exhibition menu">
               <div className="site-menu-heading">
                 <span>Become a Legend</span>
-                <strong>Yoshi + Moshi</strong>
+                <button
+                  className="site-menu-home"
+                  type="button"
+                  onClick={() => {
+                    setActiveId(null);
+                    setDetailId(null);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Yoshi + Moshi
+                </button>
               </div>
               {categories.map((category) => (
                 <a

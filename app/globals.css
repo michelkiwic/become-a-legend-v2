@@ -702,9 +702,24 @@ a:focus-visible {
   letter-spacing: 0.15em;
 }
 
-.site-menu-heading strong {
+.site-menu-home {
+  width: max-content;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--paper);
+  cursor: pointer;
   font-size: 1rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.site-menu-home:hover,
+.site-menu-home:focus-visible {
+  color: var(--rebel-pink);
+  transform: translateX(4px);
 }
 
 .site-menu a,
