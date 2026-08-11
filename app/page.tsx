@@ -7,6 +7,7 @@ type Category = {
   name: string;
   point: { x: number; y: number };
   outline: string;
+  frameOutline?: string;
   detailSrc: string;
   closeup?: {
     src: string;
@@ -82,6 +83,8 @@ const categories: Category[] = [
     detailSrc: "yoshi-moshi-model.jpg",
     outline:
       "M56.2 46.7 C58.1 45.5 60.7 46.2 62.7 45.7 C65.1 46.3 67.1 45.9 67.6 48.2 C67.1 50.5 67.9 52.8 67.1 55.5 C65.3 57.2 62.9 56.5 60.7 57.1 C58.4 56.4 56.1 57.2 55.8 54.6 C56.4 52.3 55.6 49.3 56.2 46.7 Z",
+    frameOutline:
+      "M50.8 41.6 C54.2 39.5 59 40.5 62.7 39.7 C67 40.8 71.1 40 72.2 44.4 C71.4 48.2 72.7 52.8 71.5 58.2 C68.4 61.5 64.2 60.3 60.5 61.6 C56.4 60.2 52.2 61.7 50.2 57.4 C51 53.1 49.6 46.9 50.8 41.6 Z",
   },
   {
     id: "07",
@@ -90,6 +93,8 @@ const categories: Category[] = [
     detailSrc: "yoshi-moshi-model.jpg",
     outline:
       "M43.2 48.6 C45 47.5 47.2 48.2 49 47.7 C51.2 48.4 53.5 47.5 54.8 48.7 C55.5 51.1 54.7 53.4 55.2 55.5 C54.4 57.7 51.8 58.4 49.6 58.1 C47.3 58.8 44.4 58.2 43.1 56.8 C42.5 54.4 43.4 51.4 43.2 48.6 Z",
+    frameOutline:
+      "M37.2 43.3 C40.7 41.1 45 42.4 49 41.7 C53.1 43 57.5 41.2 60.8 43.5 C62 48 60.9 52.8 61.6 57.2 C60 61.8 55 63.2 50 62.7 C45.5 64 40 62.8 37.2 60.1 C36 55 37.8 48.8 37.2 43.3 Z",
   },
 ];
 
@@ -334,8 +339,8 @@ export default function Home() {
             ))}
             {activeCategory ? (
               <g className="ink-frame">
-                <path className="ink-frame-stroke" d={activeCategory.outline} />
-                <path className="ink-frame-flecks" d={activeCategory.outline} />
+                <path className="ink-frame-stroke" d={activeCategory.frameOutline ?? activeCategory.outline} />
+                <path className="ink-frame-flecks" d={activeCategory.frameOutline ?? activeCategory.outline} />
                 <g className="ink-splatter">
                   <circle cx={activeCategory.point.x - 7.4} cy={activeCategory.point.y - 10.2} r="0.58" />
                   <circle cx={activeCategory.point.x - 5.7} cy={activeCategory.point.y - 11.5} r="0.26" />
