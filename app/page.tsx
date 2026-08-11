@@ -367,6 +367,13 @@ export default function Home() {
             <span className="funded-button-face">Fully funded!</span>
           </span>
 
+          <button className="model-footer-action model-footer-finances" type="button">
+            Finances
+          </button>
+          <button className="model-footer-action model-footer-contacts" type="button">
+            Contacts
+          </button>
+
           <svg
             className="hotspot-map"
             viewBox="0 0 100 100"
