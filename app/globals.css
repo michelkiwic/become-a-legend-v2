@@ -666,13 +666,16 @@ a:focus-visible {
   position: absolute;
   z-index: 30;
   top: 100px;
+  bottom: 0;
   right: 0;
   display: grid;
+  grid-auto-rows: minmax(50px, 1fr);
   width: min(360px, calc(100% - 36px));
   border: 1px solid rgba(242, 240, 233, 0.32);
   background: #0a0a0a;
   box-shadow: 12px 14px 0 rgba(0, 0, 0, 0.38);
   opacity: 0;
+  overflow-y: auto;
   pointer-events: none;
   transform: translateY(-12px) scale(0.98);
   transform-origin: top right;
