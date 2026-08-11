@@ -924,8 +924,9 @@ a:focus-visible {
 .detail-back {
   position: absolute;
   z-index: 5;
-  top: 3%;
-  right: clamp(64px, 8%, 96px);
+  right: auto;
+  bottom: 3%;
+  left: 3%;
   display: inline-flex;
   align-items: center;
   gap: 0.65em;
@@ -934,7 +935,7 @@ a:focus-visible {
   background: var(--ink);
   color: var(--paper);
   cursor: pointer;
-  font-size: clamp(0.52rem, 0.75vw, 0.78rem);
+  font-size: clamp(1.35rem, 2.25vw, 2.35rem);
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -946,7 +947,7 @@ a:focus-visible {
   border-color: var(--rebel-pink);
   background: var(--rebel-pink);
   color: #fff;
-  transform: translate(-3px, 3px);
+  transform: translate(4px, -4px);
 }
 
 @keyframes detail-page-in {
