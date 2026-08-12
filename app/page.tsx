@@ -208,12 +208,17 @@ export default function Home() {
       >
         <span className="tour-dimmer" aria-hidden="true" />
         <span className="tour-poster">
-          <img
+          <video
             className="tour-background"
-            src="yoshi-moshi-red-boat.png"
-            alt="Yoshi and Moshi with a red boat in the jungle"
-            draggable={false}
-          />
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="yoshi-moshi-red-boat.png"
+            aria-label="Yoshi and Moshi with a red boat in the jungle"
+          >
+            <source src="yoshi-moshi-jungle-loop.mp4" type="video/mp4" />
+          </video>
           <span className="tour-shade" aria-hidden="true" />
           <span className="tour-marquee tour-marquee-top" aria-hidden="true">
             HONK! HONK! — &nbsp; THE LEGENDS ARE ON THE MOVE &nbsp; HONK! HONK! — &nbsp; THE LEGENDS ARE ON THE MOVE
