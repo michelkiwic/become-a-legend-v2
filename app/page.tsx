@@ -214,6 +214,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            preload="auto"
             poster="yoshi-moshi-red-boat.png"
             aria-label="Yoshi and Moshi with a red boat in the jungle"
           >
