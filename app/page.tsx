@@ -329,6 +329,7 @@ export default function Home() {
             className={`category-detail category-detail-${detailCategory.id}`}
             aria-labelledby="category-detail-title"
             key={detailCategory.id}
+            onClick={returnToModel}
           >
             <div className="detail-copy">
               <span className="detail-number">{detailCategory.id}</span>
@@ -351,7 +352,10 @@ export default function Home() {
             <button
               className="detail-back"
               type="button"
-              onClick={returnToModel}
+              onClick={(event) => {
+                event.stopPropagation();
+                returnToModel();
+              }}
             >
               <span aria-hidden="true">←</span> Back to model
             </button>
