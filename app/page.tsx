@@ -221,17 +221,12 @@ export default function Home() {
             <source src="yoshi-moshi-jungle-loop.mp4" type="video/mp4" />
           </video>
           <span className="tour-shade" aria-hidden="true" />
-          <span className="tour-marquee tour-marquee-top" aria-hidden="true">
-            HONK! HONK! — &nbsp; THE LEGENDS ARE ON THE MOVE &nbsp; HONK! HONK! — &nbsp; THE LEGENDS ARE ON THE MOVE
-          </span>
           <span className="tour-headline">
             <strong>Yoshi + Moshi</strong>
             <strong>are coming to</strong>
             <strong>your town!</strong>
           </span>
-          <span className="tour-badge tour-badge-left" aria-hidden="true">LIVE!</span>
-          <span className="tour-badge tour-badge-right" aria-hidden="true">SOON!</span>
-          <span className="tour-enter">Click again — make way!</span>
+          <span className="tour-enter">CLICK AGAIN</span>
         </span>
       </button>
       </div>
