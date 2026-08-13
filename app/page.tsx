@@ -239,10 +239,11 @@ export default function Home() {
       <header className="masthead">
         <a
           className="wordmark"
-          href="#model"
+          href="/"
           aria-label="Yoshi und Moshi – zum Ausstellungsmodell"
-          onClick={() => {
-            returnToModel();
+          onClick={(event) => {
+            event.preventDefault();
+            window.location.assign(window.location.pathname);
           }}
         >
           <span className="wordmark-main">YOSHI<span>+</span>MOSHI</span>

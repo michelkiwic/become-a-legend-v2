@@ -573,6 +573,7 @@ a:focus-visible {
 }
 
 .wordmark-main {
+  color: var(--rebel-pink);
   font-size: clamp(1.2rem, 2.1vw, 2.3rem);
   font-weight: 900;
   letter-spacing: -0.08em;
