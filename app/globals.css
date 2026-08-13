@@ -1114,19 +1114,20 @@ a:focus-visible {
   z-index: 6;
   top: 89.5%;
   display: inline-flex;
-  min-width: clamp(104px, 11vw, 190px);
-  min-height: clamp(34px, 3vw, 52px);
+  min-width: clamp(132px, 14.5vw, 250px);
+  min-height: clamp(48px, 4.4vw, 78px);
   align-items: center;
   justify-content: center;
-  border: 2px solid #050505;
+  border: clamp(2px, 0.18vw, 4px) solid #050505;
   background: var(--rebel-pink);
-  box-shadow: 6px 6px 0 #050505;
+  box-shadow: clamp(6px, 0.55vw, 11px) clamp(6px, 0.55vw, 11px) 0 #050505;
   color: #ffffff;
   cursor: pointer;
-  font-size: clamp(0.8rem, 1.18vw, 1.28rem);
+  font-size: clamp(1rem, 1.55vw, 1.95rem);
   font-weight: 900;
-  letter-spacing: -0.035em;
-  line-height: 0.86;
+  letter-spacing: -0.055em;
+  line-height: 0.78;
+  text-shadow: 2px 2px 0 rgba(5, 5, 5, 0.18);
   text-transform: uppercase;
   transition: transform 180ms cubic-bezier(0.16, 1.35, 0.3, 1), box-shadow 180ms ease, background 180ms ease;
 }
@@ -1144,7 +1145,7 @@ a:focus-visible {
 .model-footer-action:hover,
 .model-footer-action:focus-visible {
   background: #050505;
-  box-shadow: 9px 9px 0 var(--rebel-pink);
+  box-shadow: 10px 10px 0 var(--rebel-pink);
 }
 
 .model-footer-finances:hover,
