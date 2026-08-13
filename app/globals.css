@@ -1063,6 +1063,23 @@ a:focus-visible {
   transform: none;
 }
 
+.model-become-title {
+  position: absolute;
+  z-index: 3;
+  top: 9%;
+  left: 72%;
+  color: #050505;
+  font-family: "Archivo Embedded", sans-serif;
+  font-size: clamp(0.8rem, 1.45vw, 1.7rem);
+  font-weight: 900;
+  letter-spacing: -0.1em;
+  line-height: 0.8;
+  text-shadow: 0.7px 0 0 #050505, -0.7px 0 0 #050505;
+  transform: rotate(-2deg) scaleX(0.88);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
 .funded-button {
   position: absolute;
   z-index: 4;

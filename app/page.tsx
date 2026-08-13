@@ -369,6 +369,8 @@ export default function Home() {
             draggable={false}
           />
 
+          <span className="model-become-title" aria-hidden="true">BECOME A LEGEND</span>
+
           <span className="funded-button" aria-label="Fully funded">
             <span className="funded-button-face">Fully funded!</span>
           </span>
