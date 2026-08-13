@@ -587,12 +587,15 @@ a:focus-visible {
 }
 
 .wordmark-subtitle {
-  color: var(--paper);
-  font-size: clamp(0.64rem, 0.82vw, 0.9rem);
+  color: #ffffff;
+  font-family: "Archivo Embedded", sans-serif;
+  font-size: clamp(0.9rem, 1.22vw, 1.45rem);
   font-weight: 900;
-  letter-spacing: 0.12em;
-  line-height: 1;
+  letter-spacing: -0.09em;
+  line-height: 0.78;
   text-transform: uppercase;
+  text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff;
+  transform: rotate(-1.5deg) scaleX(0.9);
 }
 
 .exhibition-title {

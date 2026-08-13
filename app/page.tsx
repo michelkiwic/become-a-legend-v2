@@ -247,7 +247,7 @@ export default function Home() {
           }}
         >
           <span className="wordmark-main">YOSHI<span>+</span>MOSHI</span>
-          <span className="wordmark-subtitle">Become a Legend</span>
+          <span className="wordmark-subtitle">BECOME A LEGEND</span>
         </a>
       </header>
 
