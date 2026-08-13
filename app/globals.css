@@ -292,8 +292,8 @@ a:focus-visible {
   width: max-content;
   max-width: 100%;
   padding: 0.02em 0.14em 0.04em;
-  background: #fff7dc;
-  color: #e51b14;
+  background: #ffffff;
+  color: #f2231b;
   box-shadow: 9px 9px 0 #0a0a0a;
   font-size: clamp(2.6rem, 7.6vw, 9.5rem);
   font-weight: 1000;
@@ -309,8 +309,8 @@ a:focus-visible {
 
 .tour-headline strong:nth-child(2) {
   margin-top: 0.1em;
-  background: #e51b14;
-  color: #fff7dc;
+  background: #f2231b;
+  color: #ffffff;
   transform: rotate(-1deg) translateX(5vw);
 }
 
