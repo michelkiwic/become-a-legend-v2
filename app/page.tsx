@@ -247,7 +247,7 @@ export default function Home() {
           }}
         >
           <span className="wordmark-main">YOSHI<span>+</span>MOSHI</span>
-          <span className="wordmark-subtitle">BECOME A LEGEND</span>
+          <span className="wordmark-subtitle">Become a Legend</span>
         </a>
       </header>
 
@@ -368,8 +368,6 @@ export default function Home() {
             alt="Yoshi and Moshi presenting a miniature exhibition model with eight exhibition categories"
             draggable={false}
           />
-
-          <span className="model-become-title" aria-hidden="true">BECOME A LEGEND</span>
 
           <span className="funded-button" aria-label="Fully funded">
             <span className="funded-button-face">Fully funded!</span>

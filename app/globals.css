@@ -587,15 +587,12 @@ a:focus-visible {
 }
 
 .wordmark-subtitle {
-  color: #ffffff;
-  font-family: "Archivo Embedded", sans-serif;
-  font-size: clamp(0.9rem, 1.22vw, 1.45rem);
+  color: var(--paper);
+  font-size: clamp(0.64rem, 0.82vw, 0.9rem);
   font-weight: 900;
-  letter-spacing: -0.09em;
-  line-height: 0.78;
+  letter-spacing: 0.12em;
+  line-height: 1;
   text-transform: uppercase;
-  text-shadow: 1px 0 0 #ffffff, -1px 0 0 #ffffff;
-  transform: rotate(-1.5deg) scaleX(0.9);
 }
 
 .exhibition-title {
@@ -1061,23 +1058,6 @@ a:focus-visible {
 .model-image-base {
   filter: none;
   transform: none;
-}
-
-.model-become-title {
-  position: absolute;
-  z-index: 3;
-  top: 9%;
-  left: 72%;
-  color: #050505;
-  font-family: "Archivo Embedded", sans-serif;
-  font-size: clamp(0.8rem, 1.45vw, 1.7rem);
-  font-weight: 900;
-  letter-spacing: -0.1em;
-  line-height: 0.8;
-  text-shadow: 0.7px 0 0 #050505, -0.7px 0 0 #050505;
-  transform: rotate(-2deg) scaleX(0.88);
-  transform-origin: left center;
-  white-space: nowrap;
 }
 
 .funded-button {
