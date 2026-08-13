@@ -729,7 +729,7 @@ a:focus-visible {
 .site-menu a,
 .site-menu > button {
   display: grid;
-  min-height: 50px;
+  min-height: 58px;
   padding: 0 16px;
   border: 0;
   border-bottom: 1px solid rgba(242, 240, 233, 0.16);
@@ -754,12 +754,12 @@ a:focus-visible {
 }
 
 .site-menu a span {
-  font-size: 0.55rem;
+  font-size: 0.7rem;
   letter-spacing: 0.12em;
 }
 
 .site-menu a strong {
-  font-size: 0.72rem;
+  font-size: 0.92rem;
   letter-spacing: 0.07em;
 }
 
