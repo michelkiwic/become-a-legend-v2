@@ -22,7 +22,7 @@
   --ink: #0a0a0a;
   --paper: #f2f0e9;
   --line: rgba(242, 240, 233, 0.32);
-  --rebel-pink: #ed0359;
+  --rebel-pink: #f2231b;
 }
 
 * {
@@ -1076,7 +1076,7 @@ a:focus-visible {
 .funded-button::before {
   position: absolute;
   inset: -6%;
-  background: #fff7dc;
+  background: #ffffff;
   clip-path: polygon(50% 0%, 60% 20%, 79% 7%, 78% 30%, 100% 27%, 84% 45%, 100% 58%, 76% 61%, 80% 84%, 59% 73%, 50% 100%, 40% 74%, 19% 87%, 23% 62%, 0% 57%, 16% 44%, 0% 27%, 23% 30%, 20% 7%, 40% 20%);
   content: "";
   transform: rotate(5deg);
@@ -1093,7 +1093,7 @@ a:focus-visible {
   place-items: center;
   background: var(--rebel-pink);
   clip-path: polygon(50% 0%, 60% 20%, 79% 7%, 78% 30%, 100% 27%, 84% 45%, 100% 58%, 76% 61%, 80% 84%, 59% 73%, 50% 100%, 40% 74%, 19% 87%, 23% 62%, 0% 57%, 16% 44%, 0% 27%, 23% 30%, 20% 7%, 40% 20%);
-  color: #fff7dc;
+  color: #ffffff;
   font-size: clamp(0.78rem, 1.25vw, 1.25rem);
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -1120,12 +1120,12 @@ a:focus-visible {
   border: 2px solid #050505;
   background: var(--rebel-pink);
   box-shadow: 6px 6px 0 #050505;
-  color: #fff7dc;
+  color: #ffffff;
   cursor: pointer;
-  font-size: clamp(0.64rem, 1vw, 1.05rem);
+  font-size: clamp(0.8rem, 1.18vw, 1.28rem);
   font-weight: 900;
-  letter-spacing: 0.1em;
-  line-height: 1;
+  letter-spacing: -0.035em;
+  line-height: 0.86;
   text-transform: uppercase;
   transition: transform 180ms cubic-bezier(0.16, 1.35, 0.3, 1), box-shadow 180ms ease, background 180ms ease;
 }
@@ -1267,7 +1267,7 @@ a:focus-visible {
   overflow: visible;
   background: rgba(5, 5, 5, 0.86);
   color: #fff;
-  box-shadow: 4px 4px 0 rgba(236, 0, 94, 0.92);
+  box-shadow: 4px 4px 0 rgba(242, 35, 27, 0.92);
   font-size: clamp(1rem, 1.65vw, 1.9rem);
   font-weight: 900;
   letter-spacing: -0.035em;
@@ -2028,7 +2028,7 @@ a:focus-visible {
   .marker-name {
     max-width: 9ch;
     padding: 0.18em 0.24em;
-    box-shadow: 2px 2px 0 rgba(236, 0, 94, 0.92);
+    box-shadow: 2px 2px 0 rgba(242, 35, 27, 0.92);
     font-size: clamp(0.58rem, 3.25vw, 1rem);
   }
 
