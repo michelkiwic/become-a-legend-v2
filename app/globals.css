@@ -1136,20 +1136,24 @@ a:focus-visible {
 .model-footer-finances {
   left: 17%;
   transform: rotate(-2deg);
+  animation: footer-finances-wobble 3.2s ease-in-out infinite;
 }
 
 .model-footer-inventory {
   left: 42%;
   transform: rotate(1deg);
+  animation: footer-inventory-wobble 3.6s 0.45s ease-in-out infinite;
 }
 
 .model-footer-contacts {
   left: 67%;
   transform: rotate(1.5deg);
+  animation: footer-contacts-wobble 3.4s 0.9s ease-in-out infinite;
 }
 
 .model-footer-action:hover,
 .model-footer-action:focus-visible {
+  animation: none;
   background: #050505;
   box-shadow: 10px 10px 0 var(--rebel-pink);
 }
@@ -1167,6 +1171,24 @@ a:focus-visible {
 .model-footer-contacts:hover,
 .model-footer-contacts:focus-visible {
   transform: rotate(1.5deg) scale(1.08);
+}
+
+@keyframes footer-finances-wobble {
+  0%, 100% { transform: rotate(-2deg) translateY(0); }
+  45% { transform: rotate(-0.8deg) translateY(-3px); }
+  72% { transform: rotate(-3deg) translateY(1px); }
+}
+
+@keyframes footer-inventory-wobble {
+  0%, 100% { transform: rotate(1deg) translateY(0); }
+  40% { transform: rotate(2.2deg) translateY(2px); }
+  70% { transform: rotate(-0.2deg) translateY(-3px); }
+}
+
+@keyframes footer-contacts-wobble {
+  0%, 100% { transform: rotate(1.5deg) translateY(0); }
+  38% { transform: rotate(0.2deg) translateY(-2px); }
+  74% { transform: rotate(2.8deg) translateY(2px); }
 }
 
 @keyframes funded-wobble {
