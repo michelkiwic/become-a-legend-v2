@@ -193,8 +193,8 @@ export default function Home() {
         <span className="entry-shade" aria-hidden="true" />
         <span className="entry-message">
           <strong>No humor<br />= no entry</strong>
+          <img src="entry-red-cross.png" alt="" draggable={false} />
         </span>
-        <img className="entry-cross" src="entry-red-cross.png" alt="" draggable={false} />
         <span className="entry-action">Click or tap for breaking news</span>
       </button>
 

@@ -106,13 +106,13 @@ a:focus-visible {
 .entry-background {
   object-fit: cover;
   object-position: center;
-  transform: scale(1.01);
+  transform: scale(-1.01, 1.01);
   transition: transform 2.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .entry-screen:hover .entry-background,
 .entry-screen:focus-visible .entry-background {
-  transform: scale(1.045);
+  transform: scale(-1.045, 1.045);
 }
 
 .entry-shade {
@@ -140,25 +140,11 @@ a:focus-visible {
   text-shadow: 0 2px 18px rgba(30, 0, 0, 0.35);
 }
 
-.entry-cross {
-  position: absolute;
-  z-index: 2;
-  top: clamp(100px, 21vh, 300px);
-  right: clamp(42px, 11vw, 240px);
-  width: clamp(120px, 12vw, 260px);
+.entry-message img {
+  width: clamp(130px, 18vw, 340px);
   height: auto;
-  filter: drop-shadow(8px 10px 0 rgba(65, 0, 0, 0.22));
-  pointer-events: none;
   transform: rotate(-8deg);
-}
-
-@media (max-width: 1100px) and (min-width: 761px) {
-  .entry-cross {
-    top: auto;
-    right: clamp(26px, 7vw, 90px);
-    bottom: clamp(92px, 15vh, 180px);
-    width: clamp(100px, 15vw, 170px);
-  }
+  filter: drop-shadow(8px 10px 0 rgba(65, 0, 0, 0.22));
 }
 
 .entry-action {
@@ -1726,11 +1712,8 @@ a:focus-visible {
     font-size: clamp(3rem, 16vw, 5.5rem);
   }
 
-  .entry-cross {
-    top: auto;
-    right: 20px;
-    bottom: clamp(126px, 20vh, 185px);
-    width: clamp(76px, 23vw, 126px);
+  .entry-message img {
+    width: clamp(105px, 32vw, 180px);
   }
 
   .entry-action {
