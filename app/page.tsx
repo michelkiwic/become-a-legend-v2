@@ -376,6 +376,9 @@ export default function Home() {
           <button className="model-footer-action model-footer-finances" type="button">
             Finances
           </button>
+          <button className="model-footer-action model-footer-inventory" type="button">
+            Inventar
+          </button>
           <button className="model-footer-action model-footer-contacts" type="button">
             Contacts
           </button>

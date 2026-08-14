@@ -1134,12 +1134,17 @@ a:focus-visible {
 }
 
 .model-footer-finances {
-  left: 24.2%;
+  left: 17%;
   transform: rotate(-2deg);
 }
 
+.model-footer-inventory {
+  left: 42%;
+  transform: rotate(1deg);
+}
+
 .model-footer-contacts {
-  left: 57.7%;
+  left: 67%;
   transform: rotate(1.5deg);
 }
 
@@ -1152,6 +1157,11 @@ a:focus-visible {
 .model-footer-finances:hover,
 .model-footer-finances:focus-visible {
   transform: rotate(-2deg) scale(1.08);
+}
+
+.model-footer-inventory:hover,
+.model-footer-inventory:focus-visible {
+  transform: rotate(1deg) scale(1.08);
 }
 
 .model-footer-contacts:hover,
